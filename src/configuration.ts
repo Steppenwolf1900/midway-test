@@ -17,9 +17,11 @@ import * as upload from '@midwayjs/upload';
 export class ContainerLifeCycle implements ILifeCycle {
   async onReady() {
     console.log(
-      '---------------------->',
+      '\n进程ID---------------------->',
       process.pid,
-      process.memoryUsage().rss / 1024 / 1024
+      '\n初始内存---------------------->',
+      process.memoryUsage().rss / 1024 / 1024,
+      'm'
     );
   }
 }

@@ -17,6 +17,11 @@ export class HelloHTTPService {
     method: 'post',
   })
   async handleHTTPEvent2(@Files() files) {
+    console.log(
+      '\n当前内存---------------------->',
+      process.memoryUsage().rss / 1024 / 1024,
+      'm'
+    );
     return 'Success';
   }
 }
